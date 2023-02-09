@@ -1,9 +1,9 @@
-## MERNStackStarter
-A boilerplate starter pack for created NodeJS apps using a MERN Stack strategy. MSS is the shortened name for this and it will be referred as this from now on.
+## BlogSystem
+A basic blog system using a Mongo Express React Node (MERN) stack strategy complete with API backend. 
 ## Installation
 ### Clone it!
 
-    git clone https://github.com/serafirim/MERNStackStarter.git
+    git clone https://github.com/serafirim/BlogSystem.git
 
 ### Set it up!
 Step 1: After changing into the directory you cloned MSS into, run the following:
