@@ -1,0 +1,144 @@
+import {useState, useEffect} from 'react'
+import { styled } from '@mui/material/styles';
+import {
+    Paper
+} from '@mui/material'
+import { useNavigate, Link } from 'react-router-dom'
+import {toast} from 'react-toastify'
+
+// #startregion ---------------[ COMPONENTS ]-------------------------------------------
+import Copyright from '../components/Copyright'
+import { Header } from '../components/Header'
+import MainContainer from '../components/MainContainer';
+// #endregion --------------------------------------------------------------------------
+
+// #region --------------( ICONS )--------------
+//import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+//import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+//import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+// #endregion
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}))
+
+//import {useAuth} from '../middleware/contextHooks'
+
+export default function Home() {
+    return (
+        <>
+            <MainContainer page="TestPage" />
+        </>
+    )
+
+    /*const {loginUser, clearErrors, toasts, isAuthenticated} = useAuth();
+    const navigate = useNavigate()
+    const [user, setUser] = useState({
+        userNameEmail: 'elon.musk@tesla.com', password: 'Password123', 
+        confirmPassword: 'Password123'
+    })
+
+    const [showPassword, setShowPassword] = useState(false)
+
+    useEffect(() => {
+        if(isAuthenticated) navigate('/blogs')
+
+        if(toasts){
+            Array.from(toasts).forEach(ele => {
+                toast(ele.message, {
+                    type: ele.type
+                })
+            });
+            clearErrors()
+        }
+    }, [toasts, isAuthenticated, clearErrors, navigate])
+
+    const handleLogin = () => {
+        const { userNameEmail, password } = user
+        if(!userNameEmail || !password ) {
+            toast('Please fill all the fields', {type: 'error'})
+            return
+        }
+        loginUser(user)
+    }
+    return (
+        <Grid container component="main" sx={{ height: '100vh' }}>
+            <CssBaseline />
+            
+            <Grid
+                item xs={false}
+                sm={4} md={7}
+                sx={{
+                    backgroundImage: 'url(https://source.unsplash.com/random)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundColor: (t) =>
+                    t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            />
+            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Box
+                    sx={{
+                        mt: 8, display: 'flex', mx: 4,
+                        flexDirection: 'column', alignItems: 'center'
+                    }}
+                >
+                    <Avatar sx={{m: 1, backgroundColor: 'secondary.main'}}>
+                        <LockOutlinedIcon  />
+                    </Avatar>
+
+                    <Typography component="h1" variant="h5">
+                        Login
+                    </Typography>
+
+                    <Grid container spacing={2} sx={{mt: 3}}>
+    
+                        <Grid item xs={12}>
+                            <TextField
+                                placeholder='Enter Your Username/Email' name='userNameEmail' 
+                                label='Username/Email' value={user.userNameEmail} 
+                                onChange={(e) => setUser({...user, userNameEmail: e.target.value})}
+                            />
+                        </Grid>
+                        <Grid item xs={12} >
+                            <TextField
+                                placeholder='Enter Password' name='password' 
+                                label='Password' value={user.password} 
+                                type={showPassword ? 'text' : 'password'}
+                                onChange={(e) => setUser({...user, password: e.target.value})}
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end" onClick={() => setShowPassword(!showPassword)}>
+                                        {!showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
+                                    </InputAdornment>,
+                                }}
+                            />
+                        </Grid>                      
+                    </Grid>
+                    <Button 
+                        onClick={handleLogin}
+                        fullWidth sx={{
+                            mt: 3, mb: 2
+                        }}
+                    >
+                        Login
+                    </Button>
+
+                    <Grid container justifyContent="flex-end">
+                        <Grid item>
+                            <Link to="/register">
+                                Don't have an account? Register
+                            </Link>
+                        </Grid>
+                    </Grid>
+                </Box>
+                <Copyright sx={{mt: 4}} />
+            </Grid>
+        </Grid>
+    );
+    */
+}

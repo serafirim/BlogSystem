@@ -1,0 +1,44 @@
+{
+  "name": "mernstackstarter",
+  "version": "1.0.0",
+  "description": "A boilerplate starter pack for created NodeJS apps using a MERN Stack strategy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serafirim/MERNStackStarter.git"
+  },
+  "keywords": [
+    "Node",
+    "JS",
+    "MERN",
+    "Mongo",
+    "Express",
+    "React"
+  ],
+  "author": "Serafirim",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/serafirim/MERNStackStarter/issues"
+  },
+  "homepage": "https://github.com/serafirim/MERNStackStarter#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.2",
+    "mongoose-unique-validator": "^3.1.0",
+    "nodemon": "^2.0.20",
+    "react-html-parser": "^2.0.2"
+  }
+}
